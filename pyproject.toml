@@ -7,11 +7,13 @@ name = "ponyagent"
 version = "0.1.0"
 description = "Lightweight, type-safe, self-evolving multi-agent operating system"
 readme = "README.md"
-license = {text = "MIT"}
+license = { text = "MIT" }
 requires-python = ">=3.10"
 dependencies = [
     "pydantic>=2.0.0",
     "httpx>=0.25.0",
+    "fastapi>=0.110.0",
+    "uvicorn>=0.27.0",
 ]
 
 [project.optional-dependencies]
@@ -21,6 +23,9 @@ dev = [
     "pytest-cov>=4.1.0",
     "ruff>=0.4.0",
 ]
+
+[project.scripts]
+ponyagent = "ponyagent.cli.app:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
