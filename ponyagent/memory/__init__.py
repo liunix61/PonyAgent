@@ -1,10 +1,17 @@
-"""Memory package - event log, state serialization, and memory stores."""
+"""Memory package - three-layer memory system."""
 
-from ponyagent.memory.event_log import EventLog, LogEntry
+from ponyagent.memory.episodic import EpisodicMemory
+from ponyagent.memory.event_log import EventLog
+from ponyagent.memory.lesson_pool import LessonPool
+from ponyagent.memory.long_term import LongTermMemory
+from ponyagent.memory.short_term import ShortTermMemory
 from ponyagent.memory.state_serializer import StateSerializer
 
 __all__ = [
     "EventLog",
-    "LogEntry",
+    "EpisodicMemory",
+    "LessonPool",
+    "LongTermMemory",
+    "ShortTermMemory",
     "StateSerializer",
 ]

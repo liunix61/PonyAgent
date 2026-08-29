@@ -17,6 +17,7 @@ class LLMAdapter:
     async def complete(
         self,
         messages: list[Message],
+        *,
         tools: list | None = None,
     ) -> Message:
         """Generate the next assistant message.
