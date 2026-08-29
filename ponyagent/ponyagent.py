@@ -180,7 +180,8 @@ class PonyAgent:
         # Run evolution backends (learn from execution)
         for backend in self.evolutions:
             try:
-                await backend.learn(goal, final_content, success=bool(final_content))
+                if hasattr(backend, "learn"):
+                    await backend.learn(goal, final_content, success=bool(final_content))
             except Exception as e:
                 logger.warning("evolution backend failed: %s", e)
 
