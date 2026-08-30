@@ -1,0 +1,18 @@
+# Docker context excludes
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.git/
+.gitignore
+.venv/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+htmlcov/
+*.log
+*.tmp
+.benchmarks/
+docs/
+.coverage
